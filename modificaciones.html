@@ -102,26 +102,6 @@
                             alert('Error al obtener los productos.');
                         });
                 },
-                obtenerProducto() {
-                    fetch(URL + 'productos/' + this.codigo)
-                        .then(response => {
-                            if (response.ok) {
-                                return response.json()
-                            } else {
-                                throw new Error('Error al obtener los datos del producto.')
-                            }
-                        })
-                        .then(data => {
-                            this.descripcion = data.descripcion
-                            this.categoria = data.categoria
-                            this.cantidad = data.cantidad
-                            this.precio = data.precio
-                            this.mostrarDatosProducto = true
-                        })
-                        .catch(error => {
-                            alert('Error al obtener los datos del producto.')
-                        })
-                },
                  eliminarProducto(codigo) {
                     // Eliminamos el producto de la fila seleccionada
                     fetch(URL + `productos/${codigo}`, { method: 'DELETE' })
