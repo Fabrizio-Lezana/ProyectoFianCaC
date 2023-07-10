@@ -102,9 +102,10 @@
                             alert('Error al obtener los productos.');
                         });
                 },
-                 eliminarProducto(codigo) {
+                eliminarProducto(codigo) {
                     // Eliminamos el producto de la fila seleccionada
-                    fetch(URL + `productos/${codigo}`, { method: 'DELETE' })
+                    if (confirm("¿Desea eliminar este producto?")){
+                        fetch(URL + `productos/${codigo}`, { method: 'DELETE' })
                         .then(response => {
                             if (response.ok) {
                                 // Eliminar el producto de la lista después de eliminarlo en el servidor
@@ -120,6 +121,7 @@
                             // Código para manejar errores
                             alert('Error al eliminar el producto.');
                         });
+                    }
                 },
                 obtenerProducto2(codigo) {
                     fetch(URL + `productos/${codigo}`)
