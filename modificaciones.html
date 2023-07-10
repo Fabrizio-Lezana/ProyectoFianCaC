@@ -171,6 +171,10 @@
                             alert('Error al guardar los cambios del producto.')
                         })
                 }
+            },
+            mounted() {
+                //Al cargar la página, obtenemos la lista de productos
+                this.obtenerProductos();
             }
         })
 
