@@ -20,6 +20,9 @@
         <label for="descripcion">Descripción:</label>
         <input type="text" id="descripcion" name="descripcion" required><br>
 
+        <label for="descripcion">Categoría:</label>
+        <input type="text" id="categoria" name="categoria" required><br>
+
         <label for="cantidad">Cantidad:</label>
         <input type="number" id="cantidad" name="cantidad" required><br>
 
@@ -40,6 +43,7 @@
             // Obtenemos los valores del formulario
             var codigo = document.getElementById('codigo').value;
             var descripcion = document.getElementById('descripcion').value;
+            var categoria = document.getElementById('categoria').value;
             var cantidad = document.getElementById('cantidad').value;
             var precio = document.getElementById('precio').value;
 
@@ -47,6 +51,7 @@
             var producto = {
                 codigo: codigo,
                 descripcion: descripcion,
+                categoria: categoria,
                 cantidad: cantidad,
                 precio: precio
             };
@@ -74,6 +79,7 @@
                     //Limpiamos el formulario.
                     document.getElementById('codigo').value = "";
                     document.getElementById('descripcion').value = "";
+                    document.getElementById('categoria').value = "";
                     document.getElementById('cantidad').value = "";
                     document.getElementById('precio').value = "";
                 })

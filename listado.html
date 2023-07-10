@@ -18,6 +18,7 @@
             <tr>
                 <th>Código</th>
                 <th>Descripción</th>
+                <th>Categoría</th>
                 <th>Cantidad</th>
                 <th align="right">Precio</th>
             </tr>
@@ -31,7 +32,7 @@
     </div>
 
     <script>
-        //const URL = "http://127.0.0.1:5000/"
+        // const URL = "http://127.0.0.1:5000/"
         const URL = "https://FabriLezana.pythonanywhere.com/"
 
         // Realizamos la solicitud GET al servidor para obtener todos los productos
@@ -52,7 +53,7 @@
                 data.forEach(function (producto) {
                     var fila = document.createElement('tr');
                     fila.innerHTML = '<td>' + producto.codigo + '</td>' +
-                        '<td>' + producto.descripcion + '</td>' +
+                        '<td>' + producto.descripcion + '</td>' + producto.categoria + '</td>' +
                         '<td align="right">' + producto.cantidad + '</td>' +
                         '<td align="right">&nbsp; &nbsp;&nbsp; &nbsp;' + producto.precio + '</td>';
                     tablaProductos.appendChild(fila);

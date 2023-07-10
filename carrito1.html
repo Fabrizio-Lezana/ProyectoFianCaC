@@ -19,6 +19,7 @@
         <tr>
           <th>Código</th>
           <th>Descripción</th>
+          <th>Categoría</th>          
           <th>Cantidad</th>
           <th>Precio</th>
           <th>Carrito</th>
@@ -28,6 +29,7 @@
         <tr v-for="producto in productos" :key="producto.codigo">
           <td>{{ producto.codigo }}</td>
           <td>{{ producto.descripcion }}</td>
+          <td>{{ producto.categoria }}</td>
           <td align="right">{{ producto.cantidad }}</td>
           <td align="right">&nbsp; &nbsp; {{ producto.precio }}</td>
           <td>
@@ -45,6 +47,7 @@
           <tr>
             <th>Código</th>
             <th>Descripción</th>
+            <th>Categoría</th>
             <th>Cantidad</th>
             <th>Precio</th>
           </tr>
@@ -53,6 +56,7 @@
           <tr v-for="item in carrito" :key="item.codigo">
             <td>{{ item.codigo }}</td>
             <td>{{ item.descripcion }}</td>
+            <td>{{ item.categoria }}</td>
             <td align="right">{{ item.cantidad }}</td>
             <td align="right">&nbsp; &nbsp; {{ item.precio }}</td>
           </tr>
